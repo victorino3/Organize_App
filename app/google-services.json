@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "476855093263",
+    "project_id": "organize-84a91",
+    "storage_bucket": "organize-84a91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476855093263:android:9fb8d0860ef2c9798dbb7a",
+        "android_client_info": {
+          "package_name": "com.victorino.organize"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476855093263-r1g79153c518a6a52biesa0ipdesmlp2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.victorino.organize",
+            "certificate_hash": "f2ffc9d10eda8de3a5ae200a2bfef78d88fb1a4d"
+          }
+        },
+        {
+          "client_id": "476855093263-d83v4a51bsqjfnke40gvophke50g12da.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSZZBRtH1ZZPVqSvfl8pJbPInO_rMu74c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476855093263-d83v4a51bsqjfnke40gvophke50g12da.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
