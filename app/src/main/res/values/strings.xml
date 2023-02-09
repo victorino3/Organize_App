@@ -6,4 +6,6 @@
     <string name="fraca">Palavra passa fraca, tente uma mais forte</string>
     <string name="emailInvalid">Email inválido</string>
     <string name="userExists">Este email já foi cadastrado</string>
+    <string name="userNotFound">Utilizador não encontrado</string>
+    <string name="login">Login realizado com sucesso</string>
 </resources>
