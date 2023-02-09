@@ -3,4 +3,7 @@
     <string name="empty">Todos campos são obrigatótio</string>
     <string name="success">Cadastro feito com sucesso</string>
     <string name="error">Cadastro não, realizado, Tente mais tarde</string>
+    <string name="fraca">Palavra passa fraca, tente uma mais forte</string>
+    <string name="emailInvalid">Email inválido</string>
+    <string name="userExists">Este email já foi cadastrado</string>
 </resources>

@@ -12,6 +12,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.victorino.organize.R;
 import com.victorino.organize.config.FirebaseConfig;
 import com.victorino.organize.model.UserInformation;
@@ -50,7 +53,22 @@ public class RegisterActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         Toast.makeText(getApplicationContext(), R.string.success, Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(getApplicationContext(), R.string.error, Toast.LENGTH_LONG).show();
+                        String authException = "";
+                        try {
+                            throw task.getException();
+                        }catch(FirebaseAuthWeakPasswordException e){
+                            authException = getString(R.string.fraca);
+                        }catch (FirebaseAuthInvalidCredentialsException e){
+                            authException = getString(R.string.emailInvalid);
+                        }
+                        catch (FirebaseAuthUserCollisionException e){
+                            authException = getString(R.string.userExists);
+                        }
+                        catch (Exception e) {
+                            authException = R.string.error + e.getMessage();
+                            e.printStackTrace();
+                        }
+                        Toast.makeText(getApplicationContext(), authException, Toast.LENGTH_LONG).show();
                     }
                 }
             });
