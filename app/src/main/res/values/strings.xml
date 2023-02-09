@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Organizze</string>
+    <string name="empty">Todos campos são obrigatótio</string>
+    <string name="success">Cadastro feito com sucesso</string>
+    <string name="error">Cadastro não, realizado, Tente mais tarde</string>
 </resources>
