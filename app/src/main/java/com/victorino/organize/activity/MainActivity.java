@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 import com.victorino.organize.R;
+import com.victorino.organize.config.FirebaseConfig;
 
 public class MainActivity extends IntroActivity {
 
@@ -51,7 +53,19 @@ public class MainActivity extends IntroActivity {
                 .build()
         );
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        callPrincipal();
+    }
 
+    public void callPrincipal(){
+        FirebaseAuth getUser = FirebaseConfig.getAuth();
+        if (getUser.getCurrentUser() != null){
+            startActivity(new Intent(this,PrincipalActivity2.class));
+        }
+
+    }
     public void registerUser(View view){
         startActivity(new Intent(this,RegisterActivity.class));
     }

@@ -3,6 +3,7 @@ package com.victorino.organize.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -52,6 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(getApplicationContext(), R.string.success, Toast.LENGTH_LONG).show();
+                        finish();
                     } else {
                         String authException = "";
                         try {
@@ -74,4 +76,6 @@ public class RegisterActivity extends AppCompatActivity {
             });
         }
         }
+
+
     }

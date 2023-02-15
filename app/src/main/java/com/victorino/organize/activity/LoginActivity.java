@@ -3,6 +3,7 @@ package com.victorino.organize.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -47,13 +48,14 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(getApplicationContext(), R.string.login, Toast.LENGTH_LONG).show();
+                        callPrincipal();
                     } else {
                         String authException = "";
                         try {
                             throw task.getException();
                         }catch (FirebaseAuthInvalidCredentialsException e){
                             authException = getString(R.string.emailInvalid);
+
                         }
                         catch (FirebaseAuthInvalidUserException e){
                             authException = getString(R.string.userNotFound);
@@ -67,5 +69,10 @@ public class LoginActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    public void callPrincipal(){
+        startActivity(new Intent(this,PrincipalActivity2.class));
+        finish();
     }
 }
