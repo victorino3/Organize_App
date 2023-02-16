@@ -13,6 +13,23 @@
         android:theme="@style/Theme.Organize"
         tools:targetApi="31">
         <activity
+            android:name=".activity.DespesaActivity"
+            android:exported="false"
+            android:theme="@style/despesaTheme"
+            >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity.ReceitaActivity"
+            android:exported="false"
+            android:theme="@style/receitaTheme">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activity.PrincipalActivity2"
             android:exported="false"
             android:label="@string/title_activity_principal2"

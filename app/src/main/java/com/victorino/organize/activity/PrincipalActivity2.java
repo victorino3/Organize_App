@@ -1,5 +1,6 @@
 package com.victorino.organize.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -42,6 +43,15 @@ public class PrincipalActivity2 extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
+    }
+    public void AddExpense(View view){
+        startActivity(new Intent(this,DespesaActivity.class));
+    }
+    public void AddIncome(View view){
+        startActivity(new Intent(this,ReceitaActivity.class));
+    }
+    public void AiSuggestion(View view){
+
     }
 
     @Override

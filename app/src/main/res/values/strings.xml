@@ -20,4 +20,5 @@
     <string name="description">fab</string>
     <string name="more">more</string>
     <string name="minus">minus</string>
+    <string name="done">done</string>
 </resources>

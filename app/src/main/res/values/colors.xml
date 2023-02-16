@@ -10,4 +10,13 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <!-- Cores despesas!-->
+    <color name="colorPrimaryDespesa">#FF706A</color>
+    <color name="colorPrimaryDarkDespesa">#E66560</color>
+    <color name="colorAccentDespesa">#FF706A</color>
+
+    <!-- Cores receitas!-->
+    <color name="colorPrimaryReceita">#00d39e</color>
+    <color name="colorPrimaryDarkReceita">#00BE8B</color>
+    <color name="colorAccentReceita">#00D39E</color>
 </resources>
