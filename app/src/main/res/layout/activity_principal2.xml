@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/more"
-            android:src="@drawable/ic_baseline_trending_down_24"
+            android:src="@drawable/ic_baseline_chat_24"
             fab:fab_label="Sugestões da Ai"
             fab:fab_size="mini" />
 
