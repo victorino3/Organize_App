@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.victorino.organize.R;
 import com.victorino.organize.config.FirebaseConfig;
+import com.victorino.organize.helper.EncodeB64;
 import com.victorino.organize.model.UserInformation;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -52,6 +53,9 @@ public class RegisterActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
+                        String encode = EncodeB64.encodeMail(fieldEmail);
+                        userToAuth.setId(encode);
+                        userToAuth.save();
                         Toast.makeText(getApplicationContext(), R.string.success, Toast.LENGTH_LONG).show();
                         finish();
                     } else {

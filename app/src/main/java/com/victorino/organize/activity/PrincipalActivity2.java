@@ -51,7 +51,7 @@ public class PrincipalActivity2 extends AppCompatActivity {
         startActivity(new Intent(this,ReceitaActivity.class));
     }
     public void AiSuggestion(View view){
-
+        //Ai snippets
     }
 
     @Override
