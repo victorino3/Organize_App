@@ -44,6 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), R.string.empty,Toast.LENGTH_LONG).show();
         }else {
             UserInformation userToAuth = new UserInformation();
+            userToAuth.setName(fieldName);
             userToAuth.setEmail(fieldEmail);
             userToAuth.setPassword(fieldPassword);
             FirebaseAuth authInFirebase = FirebaseConfig.getAuth();

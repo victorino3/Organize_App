@@ -61,6 +61,7 @@ public class MainActivity extends IntroActivity {
 
     public void callPrincipal(){
         FirebaseAuth getUser = FirebaseConfig.getAuth();
+        getUser.signOut();
         if (getUser.getCurrentUser() != null){
             startActivity(new Intent(this,PrincipalActivity2.class));
         }
