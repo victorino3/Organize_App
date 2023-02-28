@@ -22,4 +22,5 @@
     <string name="minus">minus</string>
     <string name="done">done</string>
     <string name="content">content</string>
+    <string name="makeTestToExpenseBlank">Todos os campos são obrigatórios para poder salvar a despesa</string>
 </resources>

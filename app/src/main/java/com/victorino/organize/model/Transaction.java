@@ -11,6 +11,7 @@ public class Transaction {
     private String category;
     private String description;
     private String date;
+    private String type;
 
     public Transaction() {
     }
@@ -25,6 +26,14 @@ public class Transaction {
                 .child(mothYear)
                 .push()
                 .setValue(this);
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public double getMoney() {
