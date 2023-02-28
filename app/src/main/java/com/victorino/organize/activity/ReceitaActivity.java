@@ -12,11 +12,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.victorino.organize.R;
 import com.victorino.organize.helper.DateCustom;
+import com.victorino.organize.model.Transaction;
 
 public class ReceitaActivity extends AppCompatActivity {
     private EditText moneyPlace;
     private TextInputEditText datePlace, categoryIncome,income;
     private FloatingActionButton sendToFirebase;
+    private Transaction transaction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,12 @@ public class ReceitaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(getApplicationContext(),"Work",Toast.LENGTH_LONG).show();
+                transaction = new Transaction();
+                transaction.setMoney(Double.parseDouble(moneyPlace.getText().toString()));
+                transaction.setCategory(categoryIncome.getText().toString());
+                transaction.setDate(datePlace.getText().toString());
+                transaction.setDescription(income.getText().toString());
+                transaction.saveTransactionExpense(datePlace.getText().toString());
             }
         });
 

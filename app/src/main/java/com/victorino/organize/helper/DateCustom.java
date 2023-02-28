@@ -13,6 +13,6 @@ public class DateCustom {
         String currentDate[] = dateToSplit.split("/");
         String month = currentDate[1];
         String years = currentDate[2];
-        return String.format("%s%s", month, years);
+        return String.format("%s_%s", month, years);
     }
 }
