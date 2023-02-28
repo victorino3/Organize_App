@@ -11,6 +11,8 @@ public class UserInformation {
     private String name;
     private String password;
     private String email;
+    private Double income = 00.0;
+    private Double expense = 00.0;
 
     public UserInformation() {
     }
@@ -20,6 +22,22 @@ public class UserInformation {
         userConf.child("Users")
                 .child(this.id)
                 .setValue( this );
+    }
+
+    public Double getIncome() {
+        return income;
+    }
+
+    public void setIncome(Double income) {
+        this.income = income;
+    }
+
+    public Double getExpense() {
+        return expense;
+    }
+
+    public void setExpense(Double expense) {
+        this.expense = expense;
     }
 
     public String getName() {
