@@ -11,11 +11,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.victorino.organize.R;
 import com.victorino.organize.helper.DateCustom;
+import com.victorino.organize.model.Transaction;
 
 public class DespesaActivity extends AppCompatActivity {
     private EditText moneyPlaceExpense;
     private TextInputEditText datePlaceExpense, categoryPlaceExpense,expense;
     private FloatingActionButton sendToFirebaseExpense;
+    private Transaction transaction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +35,12 @@ public class DespesaActivity extends AppCompatActivity {
         sendToFirebaseExpense.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(getApplicationContext(),"Work",Toast.LENGTH_LONG).show();
+                transaction = new Transaction();
+                transaction.setMoney(Double.parseDouble(moneyPlaceExpense.getText().toString()));
+                transaction.setCategory(categoryPlaceExpense.getText().toString());
+                transaction.setDate(datePlaceExpense.getText().toString());
+                transaction.setDescription(expense.getText().toString());
+                transaction.saveTransactionExpense(datePlaceExpense.getText().toString());
             }
         });
     }
