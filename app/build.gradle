@@ -50,4 +50,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.1.0'
     implementation  'com.google.firebase:firebase-auth:21.1.0'
     implementation  'com.github.clans:fab:1.6.4'
+    implementation 'com.github.prolificinteractive:material-calendarview:2.0.0'
 }
