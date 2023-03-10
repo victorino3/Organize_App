@@ -24,4 +24,5 @@
     <string name="content">content</string>
     <string name="makeTestToExpenseBlank">Todos os campos são obrigatórios para poder salvar a despesa</string>
     <string name="makeTestToIncomeBlank">Todos os campos são obrigatórios para poder salvar a receita</string>
+    <string name="logout">Sair</string>
 </resources>
